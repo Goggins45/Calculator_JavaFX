@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.GridPane?>
+
+<GridPane fx:controller="com.example.calculator.CalculatorController"
+          xmlns:fx="http://javafx.com/fxml"
+          alignment="CENTER"
+          hgap="5"
+          vgap="5"
+          style="-fx-background-color: #292929;">
+
+    <Label fx:id="display"
+           text="0"
+           GridPane.columnIndex="0"
+           GridPane.rowIndex="0"
+           GridPane.columnSpan="7"
+           style="-fx-background-color: #444444; -fx-text-fill: white; -fx-font-size: 30px; -fx-alignment: CENTER; -fx-padding: 20px; -fx-border-color: black; -fx-border-width: 1px; -fx-pref-width: 550; -fx-alignment: center;"/>
+    <Button text="C"
+            GridPane.columnIndex="0"
+            GridPane.rowIndex="1"
+            onAction="#processFunction"
+            style="-fx-background-color: #FF3333; -fx-text-fill: black; -fx-font-size: 20px; -fx-pref-width: 75;"/>
+
+    <Button text="CE"
+            GridPane.columnIndex="1"
+            GridPane.rowIndex="1"
+            onAction="#processFunction"
+            style="-fx-background-color: #FF3333; -fx-text-fill: black; -fx-font-size: 20px; -fx-pref-width: 75;"/>
+
+    <Button text="±"
+            GridPane.columnIndex="2"
+            GridPane.rowIndex="1"
+            onAction="#processFunction"
+            style="-fx-background-color: #FFA500; -fx-text-fill: black; -fx-font-size: 20px; -fx-pref-width: 75;"/>
+
+    <Button text="÷"
+            GridPane.columnIndex="3"
+            GridPane.rowIndex="1"
+            onAction="#processOperator"
+            style="-fx-background-color: #FFA500; -fx-text-fill: black; -fx-font-size: 20px; -fx-pref-width: 75;"/>
+
+    <Button text="7"
+            GridPane.columnIndex="0"
+            GridPane.rowIndex="2"
+            onAction="#processNumber"
+            style="-fx-background-color: #1E90FF; -fx-text-fill: black; -fx-font-size: 20px; -fx-pref-width: 75;"/>
+
+    <Button text="8"
+            GridPane.columnIndex="1"
+            GridPane.rowIndex="2"
+            onAction="#processNumber"
+            style="-fx-background-color: #1E90FF; -fx-text-fill: black; -fx-font-size: 20px; -fx-pref-width: 75;"/>
+
+    <Button text="9"
+            GridPane.columnIndex="2"
+            GridPane.rowIndex="2"
+            onAction="#processNumber"
+            style="-fx-background-color: #1E90FF; -fx-text-fill: black; -fx-font-size: 20px; -fx-pref-width: 75;"/>
+
+    <Button text="*"
+            GridPane.columnIndex="3"
+            GridPane.rowIndex="2"
+            onAction="#processOperator"
+            style="-fx-background-color: #FFA500; -fx-text-fill: black; -fx-font-size: 20px; -fx-pref-width: 75;"/>
+
+    <Button text="4"
+            GridPane.columnIndex="0"
+            GridPane.rowIndex="3"
+            onAction="#processNumber"
+            style="-fx-background-color: #1E90FF; -fx-text-fill: black; -fx-font-size: 20px; -fx-pref-width: 75;"/>
+
+    <Button text="5"
+            GridPane.columnIndex="1"
+            GridPane.rowIndex="3"
+            onAction="#processNumber"
+            style="-fx-background-color: #1E90FF; -fx-text-fill: black; -fx-font-size: 20px; -fx-pref-width: 75;"/>
+
+    <Button text="6"
+            GridPane.columnIndex="2"
+            GridPane.rowIndex="3"
+            onAction="#processNumber"
+            style="-fx-background-color: #1E90FF; -fx-text-fill: black; -fx-font-size: 20px; -fx-pref-width: 75;"/>
+
+    <Button text="-"
+            GridPane.columnIndex="3"
+            GridPane.rowIndex="3"
+            onAction="#processOperator"
+            style="-fx-background-color: #FFA500; -fx-text-fill: black; -fx-font-size: 20px; -fx-pref-width: 75;"/>
+
+    <Button text="1"
+            GridPane.columnIndex="0"
+            GridPane.rowIndex="4"
+            onAction="#processNumber"
+            style="-fx-background-color: #1E90FF; -fx-text-fill: black; -fx-font-size: 20px; -fx-pref-width: 75;"/>
+
+    <Button text="2"
+            GridPane.columnIndex="1"
+            GridPane.rowIndex="4"
+            onAction="#processNumber"
+            style="-fx-background-color: #1E90FF; -fx-text-fill: black; -fx-font-size: 20px; -fx-pref-width: 75;"/>
+
+    <Button text="3"
+            GridPane.columnIndex="2"
+            GridPane.rowIndex="4"
+            onAction="#processNumber"
+            style="-fx-background-color: #1E90FF; -fx-text-fill: black; -fx-font-size: 20px; -fx-pref-width: 75;"/>
+
+    <Button text="+"
+            GridPane.columnIndex="3"
+            GridPane.rowIndex="4"
+            onAction="#processOperator"
+            style="-fx-background-color: #FFA500; -fx-text-fill: black; -fx-font-size: 20px; -fx-pref-width: 75;"/>
+
+    <Button text="0"
+            GridPane.columnIndex="0"
+            GridPane.rowIndex="5"
+            onAction="#processNumber"
+            style="-fx-background-color: #1E90FF; -fx-text-fill: black; -fx-font-size: 20px; -fx-pref-width: 75;"/>
+
+    <Button text="."
+            GridPane.columnIndex="1"
+            GridPane.rowIndex="5"
+            onAction="#processNumber"
+            style="-fx-background-color: #1E90FF; -fx-text-fill: black; -fx-font-size: 20px; -fx-pref-width: 75;"/>
+
+    <Button text="="
+            GridPane.columnIndex="2"
+            GridPane.rowIndex="5"
+            onAction="#processOperator"
+            style="-fx-background-color: #FFA500; -fx-text-fill: black; -fx-font-size: 20px; -fx-pref-width: 75;"/>
+
+    <Button text="x!"
+            GridPane.columnIndex="4"
+            GridPane.rowIndex="5"
+            onAction="#processFunction"
+            style="-fx-background-color: #FFA500; -fx-text-fill: black; -fx-font-size: 20px; -fx-pref-width: 75;"/>
+
+    <Button text="1/x"
+            GridPane.columnIndex="3"
+            GridPane.rowIndex="5"
+            onAction="#processFunction"
+            style="-fx-background-color: #FFA500; -fx-text-fill: black; -fx-font-size: 20px; -fx-pref-width: 75;"/>
+
+    <Button text="mod"
+            GridPane.columnIndex="4"
+            GridPane.rowIndex="1"
+            onAction="#processOperator"
+            style="-fx-background-color: #FFA500; -fx-text-fill: black; -fx-font-size: 20px; -fx-pref-width: 75;"/>
+
+    <Button text="^"
+            GridPane.columnIndex="4"
+            GridPane.rowIndex="2"
+            onAction="#processOperator"
+            style="-fx-background-color: #FFA500; -fx-text-fill: black; -fx-font-size: 20px; -fx-pref-width: 75;"/>
+
+    <Button text="sin"
+            GridPane.columnIndex="5"
+            GridPane.rowIndex="1"
+            onAction="#processFunction"
+            style="-fx-background-color: #FFA500; -fx-text-fill: black; -fx-font-size: 20px; -fx-pref-width: 75;"/>
+
+    <Button text="cos"
+            GridPane.columnIndex="5"
+            GridPane.rowIndex="2"
+            onAction="#processFunction"
+            style="-fx-background-color: #FFA500; -fx-text-fill: black; -fx-font-size: 20px; -fx-pref-width: 75;"/>
+
+    <Button text="tan"
+            GridPane.columnIndex="5"
+            GridPane.rowIndex="3"
+            onAction="#processFunction"
+            style="-fx-background-color: #FFA500; -fx-text-fill: black; -fx-font-size: 20px; -fx-pref-width: 75;"/>
+
+    <Button text="asin"
+            GridPane.columnIndex="5"
+            GridPane.rowIndex="4"
+            onAction="#processFunction"
+            style="-fx-background-color: #FFA500; -fx-text-fill: black; -fx-font-size: 20px; -fx-pref-width: 75;"/>
+
+    <Button text="acos"
+            GridPane.columnIndex="5"
+            GridPane.rowIndex="5"
+            onAction="#processFunction"
+            style="-fx-background-color: #FFA500; -fx-text-fill: black; -fx-font-size: 20px; -fx-pref-width: 75;"/>
+
+    <Button text="atan"
+            GridPane.columnIndex="6"
+            GridPane.rowIndex="1"
+            onAction="#processFunction"
+            style="-fx-background-color: #FFA500; -fx-text-fill: black; -fx-font-size: 20px; -fx-pref-width: 75;"/>
+
+    <Button text="√n"
+            GridPane.columnIndex="4"
+            GridPane.rowIndex="3"
+            onAction="#processFunction"
+            style="-fx-background-color: #FFA500; -fx-text-fill: black; -fx-font-size: 20px; -fx-pref-width: 75;"/>
+
+    <Button text="logn"
+            GridPane.columnIndex="4"
+            GridPane.rowIndex="4"
+            onAction="#processFunction"
+            style="-fx-background-color: #FFA500; -fx-text-fill: black; -fx-font-size: 20px; -fx-pref-width: 75;"/>
+</GridPane>
